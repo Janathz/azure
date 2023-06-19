@@ -8,7 +8,7 @@
       "methods": [
         "get"
       ],
-      "route": "GetPosts/{blog}"
+      "route": "job-posts/{blog}"
     },
     {
       "type": "http",

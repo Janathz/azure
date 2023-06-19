@@ -8,7 +8,7 @@
       "methods": [
         "delete"
       ],
-      "route": "DeletePost/{blog}/{id}"
+      "route": "job-posts/{blog}/{id}"
     },
     {
       "type": "http",
