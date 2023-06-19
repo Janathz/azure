@@ -22,4 +22,22 @@ const insertEntity = (tableName, entity) => {
   });
 };
 
+const queryEntities = (tableName, query) => {
+  return new Promise((resolve, reject) => {
+    tableSvc.queryEntities(
+      tableName,
+      query,
+      null, //expects a continouation token
+      { payloadFormat: "application/json;odata=nometadata" },
+      (error, result, response) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(response.body);
+        }
+      }
+    );
+  });
+};
 exports.insertEntity = insertEntity;
+exports.queryEntities = queryEntities;
